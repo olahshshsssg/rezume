@@ -1,0 +1,77 @@
+:root {
+  --desk: #efece5;
+  --paper: #f8f6f1;
+  --surface: #ffffff;
+  --ink: #1a1c1e;
+  --ink-2: #55595e;
+  --ink-3: #8a8e93;
+  --rule: #ddd9d0;
+  --rule-strong: #c4bfb4;
+  --lazur: #12608a;
+  --lazur-strong: #0b4a6b;
+  --lazur-wash: #e3eef3;
+  --brick: #b5462f;
+  --brick-wash: #f6e6e1;
+  --olive: #4f6b2e;
+  --ochre: #8a6212;
+  --on-lazur: #ffffff;
+  --font-ui: 'Onest', system-ui, sans-serif;
+  --font-voice: 'Comic Relief', 'Onest', sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Source Sans 3', 'Onest', sans-serif;
+  --font-modern: 'Manrope', 'Onest', sans-serif;
+  --radius-1: 3px;
+  --radius-2: 6px;
+  --radius-pill: 999px;
+  --shadow-sheet: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 24px -8px rgb(0 0 0 / 0.12);
+  --shadow-sheet-lifted: 0 24px 48px -12px rgb(0 0 0 / 0.18);
+  --dur-instant: 80ms;
+  --dur-quick: 160ms;
+  --dur-base: 240ms;
+  --dur-expressive: 420ms;
+  --dur-sheet: 600ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-enter: cubic-bezier(0, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  color-scheme: light;
+  font-family: var(--font-ui);
+  font-synthesis: none;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+:root[data-theme='dark'] {
+  --desk: #0f1113;
+  --paper: #16191c;
+  --surface: #1d2024;
+  --ink: #ece9e3;
+  --ink-2: #a6a9ad;
+  --ink-3: #6e7277;
+  --rule: #2c3035;
+  --rule-strong: #3b4046;
+  --lazur: #5fb4d4;
+  --lazur-strong: #86c8e0;
+  --lazur-wash: #152a35;
+  --brick: #e08a73;
+  --brick-wash: #33201b;
+  --olive: #a4c27a;
+  --ochre: #d9b25e;
+  --on-lazur: #0f1113;
+  --shadow-sheet: 0 12px 32px -8px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-base: 120ms;
+    --dur-expressive: 120ms;
+    --dur-sheet: 120ms;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-height: 100%; }
+body { background: var(--paper); }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+::selection { background: var(--lazur-wash); }
